@@ -2,7 +2,7 @@
     "apps": [
       {
         "name": "app-file-download",
-        "script": "./file-download/index",
+        "script": "./file-download/index.js",
         "env": {
           "COMMON_VARIABLE": "true"
         },
@@ -21,7 +21,7 @@
         "ref": "origin/master",
         "repo": "https://github.com/EvanXzj/all-simple-test-demo",
         "path": "/home/xuzhijian/backend/app-file-download",
-        "post-deploy": "npm i && pm2 startOrRestart ecosystem.json --env production"
+        "post-deploy": "sudo npm i && pm2 startOrRestart ecosystem.json --env production"
       }
     }
   }
