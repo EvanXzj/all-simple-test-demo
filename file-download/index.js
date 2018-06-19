@@ -26,4 +26,6 @@ app.get('/download', function (req, res, next) {
   f.pipe(res);
 });
 
-http.createServer(app).listen(port);
+http.createServer(app).listen(port, () => {
+    console.log('server runnig at 127.0.0.1:', port)
+});
