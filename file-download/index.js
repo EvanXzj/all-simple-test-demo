@@ -9,21 +9,23 @@ const app = express();
 app.get('/download', function (req, res, next) {
 
 　//第一种方式
-  //var f="F:/ftproot/NW.js.docx";
-  //var f="f:/ftproot/我是中文的语言.txt"
-  ////var f = req.params[0];
-  //f = path.resolve(f);
-  //console.log('Download file: %s', f);
-  //res.download(f);
+  var f="F:/ftproot/NW.js.docx";
+  var f="f:/ftproot/我是中文的语言.txt"
+  //var f = req.params[0];
+  f = path.resolve(f);
+  console.log('Download file: %s', f);
+  res.download(f);
 
   //第二种方式
   const p=path.resolve("/file-download/resource/app-release.apk", __filename);
-  const f = fs.createReadStream(p);
+  //   const f = fs.createReadStream(p);
+  f = path.resolve(f);
   res.writeHead(200, {
     'Content-Type': 'application/force-download',
     'Content-Disposition': 'attachment; filename=app-release.apk'
   });
-  f.pipe(res);
+  console.log('Download file: %s', f);
+  res.download(f);
 });
 
 http.createServer(app).listen(port, () => {
