@@ -1,23 +1,12 @@
 {
-  "name": "all-simple-test-demo",
-  "version": "1.0.0",
-  "description": "simple test demo for some modules",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EvanXzj/all-simple-test-demo.git"
-  },
-  "keywords": [],
-  "author": "chuidylan <chuidylan@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/EvanXzj/all-simple-test-demo/issues"
-  },
-  "homepage": "https://github.com/EvanXzj/all-simple-test-demo#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "bluebird": "^3.5.1",
+    "commander": "^2.17.1",
+    "customized-errors": "^1.0.0",
+    "dotenv": "^6.0.0",
+    "joi": "^13.6.0",
+    "lmsr": "git+ssh://git@github.com:BeliefChainOrg/lmsr.js.git#master",
+    "statuses": "^1.5.0",
+    "winston": "^3.0.0"
   }
 }
